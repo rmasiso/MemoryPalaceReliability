@@ -1,6 +1,8 @@
 # MemoryPalaceReliability
 repo for paper: How sturdy is your memory palace? Reliable room representations predict subsequent reinstatement of placed objects
 
+This is a preliminary upload and will contain further details and instructions at a later time!
+
 
 ## Project Organization
 
