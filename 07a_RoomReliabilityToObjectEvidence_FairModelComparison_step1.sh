@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # How long is job (in minutes)?
-#SBATCH --time=60
+#SBATCH --time=90
 # SBATCH --time=10
 # SBATCH --time=60
 
@@ -12,8 +12,7 @@
 #SBATCH --cpus-per-task=1 --mem-per-cpu=12000
 
 # Where to output log files?
-#   SBATCH -o /jukebox/norman/rmasis/MemPal/analysis/MemPal2024/PythonData2024/Logs/reliability2evidence/slurm_-%j.log
-#SBATCH -o /jukebox/norman/rmasis/MemPal/analysis/MemPal2024/PythonData2024/Logs/reliability2evidence_20250524/slurm_-%j.log
+#SBATCH -o /jukebox/norman/rmasis/MemPal/analysis/MemPal2024/PythonData2024/Logs/reliability2evidence_pairwise/slurm_-%j_%a.log
 
 # Number jobs to run in parallel
 #SBATCH --array=0-1483 #total number of files to preprocess (~30 subj * 7 runs)
@@ -51,7 +50,7 @@ module load pyger
 export HDF5_USE_FILE_LOCKING=FALSE
 
 # python 20220911_TemplatesComparisonAndRelationshipToBehavior_step2.py $hem
-python 05a_Reliability2Evidence_step2.py $roi $hem $measure_key $network $trial_type 
+python 07a_RoomReliabilityToObjectEvidence_FairModelComparison_step2.py $roi $hem $measure_key $network $trial_type 
 
 
 echo "Finished running this subj."

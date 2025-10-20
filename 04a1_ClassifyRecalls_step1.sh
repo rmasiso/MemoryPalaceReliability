@@ -34,7 +34,7 @@ module load pyger
 
 export HDF5_USE_FILE_LOCKING=FALSE
 
-python 04a_ClassifyRecalls_step2.py $roi $betatypes $hems
+python 04a1_ClassifyRecalls_step2.py $roi $betatypes $hems
 
 
 echo "Finished running this subj."

@@ -154,6 +154,9 @@ room_reliability = dd.io.load(os.path.join(reliability_dir,fname),group='/{}'.fo
 RIP_date             = 20240108 # recalled item evidence (RIP: recalled item probability)
 RIP_date             = 20240401 # second permutation fix / recalled item evidence (RIP: recalled item probability)
 
+# revision update
+RIP_date             = 20250524 # second permutation fix / proper indexing / recalled item evidence (RIP: recalled item probability)
+
 network_evidence_dir = "../PythonData2024/Output/RecallEvidence"
 fname                = '{}_NetworksRecallEvidence_shift{}_top{}.pkl'.format(RIP_date,shift,top_thresh)
 
@@ -236,6 +239,8 @@ anas['m1_r2']                 = regression_info['m1_r2']
 ###
 ### SAVE SAVE SAVE
 ###
+
+date = RIP_date
 
 # comment this back in
 savedir  = '../PythonData2024/Output/Reliability2Evidence'; create_dirs(savedir)
